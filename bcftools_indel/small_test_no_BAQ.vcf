@@ -1,0 +1,42 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##bcftoolsVersion=1.12+htslib-1.12
+##bcftoolsCommand=mpileup -Q 20 -d 100000 -L 100000 -a AD,DP,SP --min-ireads 20 --gap-frac 0.5 --no-BAQ -f /Users/dlu/Documents/genomes/MN908947.3.fa small_test.bam
+##reference=file:///Users/dlu/Documents/genomes/MN908947.3.fa
+##contig=<ID=MN908947.3,length=29903>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of raw reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPB,Number=1,Type=Float,Description="Mann-Whitney U test of Read Position Bias (bigger is better)">
+##INFO=<ID=MQB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality Bias (bigger is better)">
+##INFO=<ID=BQB,Number=1,Type=Float,Description="Mann-Whitney U test of Base Quality Bias (bigger is better)">
+##INFO=<ID=MQSB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality vs Strand Bias (bigger is better)">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric.">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Number of high-quality bases">
+##FORMAT=<ID=SP,Number=1,Type=Integer,Description="Phred-scaled strand bias P-value">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths (high-quality bases)">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=AF1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele frequency (assuming HWE)">
+##INFO=<ID=AF2,Number=1,Type=Float,Description="Max-likelihood estimate of the first and second group ALT allele frequency (assuming HWE)">
+##INFO=<ID=AC1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele count (no HWE assumption)">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Root-mean-square mapping quality of covering reads">
+##INFO=<ID=FQ,Number=1,Type=Float,Description="Phred probability of all samples being the same">
+##INFO=<ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+##INFO=<ID=G3,Number=3,Type=Float,Description="ML estimate of genotype frequencies">
+##INFO=<ID=HWE,Number=1,Type=Float,Description="Chi^2 based HWE test P-value based on G3">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##bcftools_callVersion=1.12+htslib-1.12
+##bcftools_callCommand=call --ploidy 1 -c -; Date=Wed Mar 17 23:03:07 2021
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##bcftools_viewVersion=1.12+htslib-1.12
+##bcftools_viewCommand=view -c 1 -Ov; Date=Wed Mar 17 23:03:07 2021
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	RR065e_02667_W-R170-D6_G11
+MN908947.3	28168	.	A	C	225.007	.	DP=197;VDB=6.10876e-24;SGB=-0.693147;MQSB=4.08556e-06;MQ0F=0;AF1=1;AC1=1;DP4=0,0,146,12;MQ=59;FQ=-999;AC=1;AN=1	GT:PL:DP:SP:AD	1:255,0:158:0:0,158
+MN908947.3	28253	.	CA	C	90.4671	.	INDEL;IDV=274;IMF=0.982079;DP=279;VDB=0.0534889;SGB=-0.693147;MQSB=0.0469493;MQ0F=0;AF1=0.5;AC1=1;DP4=6,86,162,25;MQ=59;FQ=-999;PV4=4.02775e-41,1,1,1;AC=1;AN=1	GT:PL:DP:SP:AD	1:255,0,127:279:255:92,187
+MN908947.3	28254	.	A	T,C	55.0051	.	DP=6;VDB=0.999781;SGB=-0.590765;MQ0F=0;AF1=1;AC1=1;DP4=0,0,5,0;MQ=60;FQ=-999;AC=1,0;AN=1	GT:PL:DP:SP:AD	1:161,76,79:5:0:0,3,2
