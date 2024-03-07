@@ -1,1 +1,1 @@
-To compare SKA and SKA2
+For ska2
